@@ -1,0 +1,14 @@
+#!/bin/cs
+import codec.json as json
+
+function get_post_body()
+    return json.to_var(json.from_stream(system.in))
+end
+
+system.out.print("Content-type: text/html\n\n")
+var body = get_post_body()
+switch system.getenv("QUERY_STRING")
+    case "test"
+        # TODO
+    end
+end
